@@ -1,0 +1,188 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Painel "Ceará mais Empreendedor" — design system (light).
+ * Base branca, tipografia institucional Sebrae, acentos da arte oficial.
+ */
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "General Sans", "Inter", sans-serif;
+  --font-impact: "Bodoni Moda", "Georgia", serif;
+
+
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Cluster territorial colors (arte de referência) */
+  --color-cluster-orange: #f37022;
+  --color-cluster-amber: #fba71a;
+  --color-cluster-teal: #00b36b;
+  --color-cluster-blue: #1994d2;
+  --color-cluster-green: #006738;
+  --color-cluster-navy: #2e3092;
+  --color-royal: #1800ad;
+  --color-royal-deep: #0d0072;
+  --color-royal-hi: #3520d9;
+
+  /* v2.1 — base azul Sebrae */
+  --color-ink: #1800ad;        /* fundo principal (azul Sebrae) */
+  --color-ink-soft: #2814c2;   /* camadas / cards */
+  --color-ink-deep: #12007d;   /* profundidade */
+  --color-cream: #f2f0ee;      /* texto principal */
+  --color-choco: #5f3213;      /* acento quente escuro */
+  --color-clay: #87654e;       /* acento quente claro */
+  --color-powder: #b9c6ff;     /* azul-pó */
+
+
+  /* Cores dos 5 eixos */
+  --color-eixo-rede: #00a3ff;
+  --color-eixo-ambiente: #ff6b00;
+  --color-eixo-inovacao: #a020f0;
+  --color-eixo-competitividade: #ffc400;
+  --color-eixo-cultura: #00c853;
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --background: #1800ad;
+  --foreground: #f2f0ee;
+
+  --card: #2814c2;
+  --card-foreground: #f2f0ee;
+
+  --popover: #2814c2;
+  --popover-foreground: #f2f0ee;
+
+  --primary: #b9c6ff;
+  --primary-foreground: #12007d;
+
+  --secondary: #3520d9;
+  --secondary-foreground: #f2f0ee;
+
+  --muted: #2814c2;
+  --muted-foreground: #c6cdf5;
+
+  --accent: #a85c32;
+  --accent-foreground: #f3ece5;
+
+  --destructive: #a34a3a;
+  --destructive-foreground: #f3ece5;
+
+  --border: rgb(242 240 238 / 0.14);
+  --input: rgb(242 240 238 / 0.18);
+  --ring: #b9c6ff;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body, #root { height: 100%; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(1200px 900px at 8% -12%, rgb(255 255 255 / 0.10), transparent 62%),
+      radial-gradient(1000px 800px at 108% 112%, rgb(13 0 90 / 0.55), transparent 62%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility text-balance { text-wrap: balance; }
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgb(218 213 207 / 0.45); }
+  70%  { box-shadow: 0 0 0 18px rgb(218 213 207 / 0); }
+  100% { box-shadow: 0 0 0 0 rgb(218 213 207 / 0); }
+}
+.animate-pulse-ring { animation: pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+@keyframes soft-float {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-4px); }
+}
+.animate-float { animation: soft-float 5s ease-in-out infinite; }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px) scale(0.985); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-rise { animation: rise-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@keyframes slow-spin { to { transform: rotate(360deg); } }
+.animate-slow-spin { animation: slow-spin 90s linear infinite; }
+@keyframes slow-spin-rev { to { transform: rotate(-360deg); } }
+.animate-slow-spin-rev { animation: slow-spin-rev 140s linear infinite; }
+
+/* Bússola */
+@keyframes bussola-breathe {
+  0%,100% { transform: translate(-50%, -50%) scale(1); opacity: 0.55; }
+  50%     { transform: translate(-50%, -50%) scale(1.06); opacity: 0.9; }
+}
+.animate-bussola-breathe { animation: bussola-breathe 6s ease-in-out infinite; }
+
+@keyframes bussola-node-in {
+  from { opacity: 0; transform: var(--node-tf) scale(0.4); }
+  to   { opacity: 1; transform: var(--node-tf) scale(1); }
+}
+.animate-node-in { animation: bussola-node-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@keyframes sweep-fade {
+  0%   { opacity: 0.35; }
+  50%  { opacity: 0.08; }
+  100% { opacity: 0.35; }
+}
+.animate-sweep { animation: sweep-fade 7s ease-in-out infinite; }
+
+@keyframes bussola-seg-in {
+  from { opacity: 0; transform: scale(0.82); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-seg-in {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: bussola-seg-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }

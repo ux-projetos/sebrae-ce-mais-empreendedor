@@ -1,0 +1,92 @@
+{
+  "ianDefinicao": "IAN (Índice de Ambiente de Negócios): índice criado pelo Sebrae Ceará para medir a evolução da cidade empreendedora em cada município.",
+  "investimentoTotalIAN2026": {
+    "valor": 5750000,
+    "moeda": "BRL",
+    "escopo": "Valor total investido nos 26 municípios do Cariri"
+  },
+  "investimentoRedeAtendimento": {
+    "valor": 1321000,
+    "moeda": "BRL"
+  },
+  "investimentoCompetitividade": {
+    "valor": 2294000,
+    "moeda": "BRL"
+  },
+  "indicadores": [
+    {
+      "id": "salas_empreendedor",
+      "nome": "Salas do Empreendedor",
+      "emoji": "🏠",
+      "descricaoCurta": "Hub de atendimento ao empreendedor, com serviços do Sebrae e parceiros integrados"
+    },
+    {
+      "id": "cultura_empreendedora",
+      "nome": "Cultura Empreendedora",
+      "emoji": "💡",
+      "descricaoCurta": "Ações de educação e disseminação da mentalidade empreendedora no território, incluindo escolas e jovens."
+    },
+    {
+      "id": "compras_publicas_acesso_credito",
+      "nome": "Compras Públicas e Acesso a Crédito",
+      "emoji": "🏛️",
+      "descricaoCurta": "Facilidade de pequenos negócios acessarem editais públicos e linhas de crédito adequadas."
+    },
+    {
+      "id": "inclusao_socioprodutiva",
+      "nome": "Inclusão Socioprodutiva",
+      "emoji": "🤝",
+      "descricaoCurta": "Inclusão de grupos e públicos em vulnerabilidade nas cadeias produtivas locais."
+    },
+    {
+      "id": "identidade_vocacoes_mercado",
+      "nome": "Identidade, Vocações e Mercado",
+      "emoji": "🧭",
+      "descricaoCurta": "Reconhecimento e fortalecimento das vocações econômicas e identidade territorial do município."
+    },
+    {
+      "id": "gestao_politicas_publicas",
+      "nome": "Gestão e Políticas Públicas",
+      "emoji": "📋",
+      "descricaoCurta": "Qualidade da gestão municipal e existência de políticas públicas voltadas ao empreendedorismo."
+    },
+    {
+      "id": "liderancas_governanca",
+      "nome": "Lideranças Locais e Governança",
+      "emoji": "👥",
+      "descricaoCurta": "Fortalecimento de lideranças locais e instâncias de governança territorial."
+    },
+    {
+      "id": "inovacao",
+      "nome": "Inovação",
+      "emoji": "🚀",
+      "descricaoCurta": "Ecossistema de inovação municipal: leis, startups, comunidades e parceiros de inovação."
+    },
+    {
+      "id": "resiliencia_climatica_sustentabilidade",
+      "nome": "Resiliência Climática e Sustentabilidade",
+      "emoji": "♻️",
+      "descricaoCurta": "Preparo do município e dos negócios locais frente a riscos climáticos e práticas sustentáveis."
+    },
+    {
+      "id": "simplificacao",
+      "nome": "Simplificação",
+      "emoji": "🧩",
+      "descricaoCurta": "Facilidade e agilidade de processos para abrir, formalizar e operar um negócio no município."
+    },
+    {
+      "id": "rede_atendimento",
+      "nome": "Rede de Atendimento",
+      "emoji": "🗺️",
+      "descricaoCurta": "Refere-se à estrutura e à capilaridade do Sebrae no território, assegurando que os serviços cheguem aos pequenos negócios por meio do Escritório Regional, das Salas do Empreendedor, pontos de atendimento e canais digitais, com foco em proximidade, acesso e qualidade no atendimento.",
+      "escopo": "regional"
+    },
+    {
+      "id": "competitividade",
+      "nome": "Competitividade",
+      "emoji": "🏆",
+      "descricaoCurta": "Projetos setoriais que fortalecem cadeias produtivas estratégicas do Cariri.",
+      "escopo": "projetos"
+    }
+  ]
+}

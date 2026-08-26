@@ -45,6 +45,7 @@ export function PainelIndicadorDetalhe({
         </div>
         <button
           onClick={onClose}
+          aria-label="Fechar indicador"
           className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#F2F0EE] text-[#1800AD] hover:bg-white"
         >
           <X className="h-5 w-5" />

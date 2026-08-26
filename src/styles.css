@@ -204,9 +204,8 @@
 
 /* Tema dark institucional — aplicado ao painel (html.dark) */
 .dark {
-  /* Azul institucional Sebrae — gradiente "Brand Deep" do Design System
-     (sebrae-ce.dscreator.com.br): linear-gradient(135deg, #3B4AFF, #0041D9) */
-  --background: 222 100% 43%;   /* #0041D9 */
+  /* Gradiente de referência do usuário: linear-gradient(180deg, #080B26, #2549E1) */
+  --background: 228 76% 51%;    /* #2549E1 */
   --foreground: 30 13% 94%;     /* #F2F0EE */
 
   --card: 247 81% 42%;          /* #2814C2 */
@@ -258,9 +257,9 @@
   }
 
   .dark body {
-    background-image:
-      radial-gradient(1200px 900px at 8% -12%, rgb(255 255 255 / 0.10), transparent 62%),
-      linear-gradient(135deg, #3b4aff 0%, #0041d9 100%);
+    /* Gradiente de referência do usuário: azul-marinho quase preto no topo
+       evoluindo para um azul vívido na base. */
+    background-image: linear-gradient(180deg, #080b26 0%, #2549e1 100%);
     background-attachment: fixed;
   }
 

@@ -268,8 +268,16 @@
   }
 
   /* Foco visível AA em todos os elementos navegáveis por teclado */
-  :where(a, button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"]))
-    :where(&:focus-visible) {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [role="button"]:focus-visible,
+  [role="checkbox"]:focus-visible,
+  [role="radio"]:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
     outline: 2px solid var(--color-ring);
     outline-offset: 2px;
   }

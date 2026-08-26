@@ -75,7 +75,9 @@
 :root {
   --radius: 0.875rem;
 
-  --background: #1800ad;
+  /* Azul institucional Sebrae — gradiente "Brand Deep" do Design System
+     (sebrae-ce.dscreator.com.br): linear-gradient(135deg, #3B4AFF, #0041D9) */
+  --background: #0041d9;
   --foreground: #f2f0ee;
 
   --card: #2814c2;
@@ -114,7 +116,7 @@
     -webkit-font-smoothing: antialiased;
     background-image:
       radial-gradient(1200px 900px at 8% -12%, rgb(255 255 255 / 0.10), transparent 62%),
-      radial-gradient(1000px 800px at 108% 112%, rgb(13 0 90 / 0.55), transparent 62%);
+      linear-gradient(135deg, #3b4aff 0%, #0041d9 100%);
     background-attachment: fixed;
   }
 

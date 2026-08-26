@@ -5,6 +5,8 @@ import {
   type IndicadorKey,
 } from "@/data/indicadores";
 import { MUNICIPIOS, type IndicadorMunicipioKey } from "@/data/municipios";
+import { INDICADOR_ICONS } from "@/lib/icons";
+import { IconBadge } from "./IconBadge";
 
 interface Props {
   indicadorAtivo: IndicadorKey | null;
@@ -54,12 +56,7 @@ export function PainelIndicadores({ indicadorAtivo, onSelect }: Props) {
               className={`group flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-all
                 ${active ? "bg-[#1800AD] text-white shadow-md" : "text-[#1800AD] hover:bg-[#1800AD]/5"}`}
             >
-              <span
-                className={`grid h-7 w-7 shrink-0 place-items-center rounded-md text-sm transition
-                  ${active ? "bg-white/20" : "bg-[#1800AD]/5 group-hover:bg-[#1800AD]/10"}`}
-              >
-                {ind.emoji}
-              </span>
+              <IconBadge icon={INDICADOR_ICONS[ind.key]} className="h-7 w-7" iconClassName="h-3.5 w-3.5" rounded="rounded-md" />
               <div className="min-w-0 flex-1">
                 <div className="truncate text-[0.72rem] font-semibold leading-tight">
                   {ind.nome}

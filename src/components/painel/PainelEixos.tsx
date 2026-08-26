@@ -1,4 +1,6 @@
 import { EIXOS, type EixoKey } from "@/data/eixos";
+import { EIXO_ICONS } from "@/lib/icons";
+import { IconBadge } from "./IconBadge";
 
 interface Props {
   eixoAtivo: EixoKey | null;
@@ -49,9 +51,7 @@ export function PainelEixos({ eixoAtivo, onSelect }: Props) {
                 aria-hidden
               />
               <div className="relative flex items-center gap-3 pl-2">
-                <span className="grid h-11 w-11 shrink-0 place-items-center text-2xl">
-                  {eixo.emoji}
-                </span>
+                <IconBadge icon={EIXO_ICONS[eixo.key]} className="h-11 w-11" iconClassName="h-6 w-6" />
                 <div className="min-w-0 flex-1">
                   <div
                     className="font-display text-base font-black leading-tight"

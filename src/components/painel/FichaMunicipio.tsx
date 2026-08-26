@@ -12,6 +12,7 @@ import { projetosDoMunicipio } from "@/data/projetos-municipio";
 import { PREMIOS, premiosDoMunicipio } from "@/data/premios";
 import { fontesReferencias, notaPesquisaCampo } from "./FontesReferencias";
 import { observatorioUrl } from "@/data/observatorio";
+import { EIXO_ICONS } from "@/lib/icons";
 
 interface Props {
   municipio: MunicipioData;
@@ -110,13 +111,18 @@ export function FichaMunicipio({ municipio, onClose }: Props) {
                 style={{ borderTop: `4px solid ${eixo.cor}` }}
               >
                 <div className="mb-3 flex items-center gap-2.5">
-                  <span
-                    className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-base"
-                    style={{ background: `${eixo.cor}22`, color: eixo.cor }}
-                    aria-hidden
-                  >
-                    {eixo.emoji}
-                  </span>
+                  {(() => {
+                    const EixoIcon = EIXO_ICONS[eixo.key];
+                    return (
+                      <span
+                        className="grid h-8 w-8 shrink-0 place-items-center rounded-lg"
+                        style={{ background: `${eixo.cor}22`, color: eixo.cor }}
+                        aria-hidden
+                      >
+                        <EixoIcon className="h-4 w-4" strokeWidth={2} />
+                      </span>
+                    );
+                  })()}
                   <span
                     className="min-w-0 font-display text-[0.72rem] font-black uppercase leading-tight tracking-[0.16em]"
                     style={{ color: eixo.cor }}

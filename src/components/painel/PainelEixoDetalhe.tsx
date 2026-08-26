@@ -3,6 +3,8 @@ import { ChevronDown, ExternalLink, X } from "lucide-react";
 import { EIXOS, indicadoresDoEixo, type EixoKey } from "@/data/eixos";
 import logoCidade from "@/assets/logo-cidade-empreendedora.png.asset.json";
 import { ConteudoIndicador } from "./ConteudoIndicador";
+import { EIXO_ICONS, INDICADOR_ICONS } from "@/lib/icons";
+import { IconBadge } from "./IconBadge";
 
 interface Props {
   eixoKey: EixoKey;
@@ -92,8 +94,8 @@ export function PainelEixoDetalhe({
           <div className="text-[0.6rem] font-semibold uppercase tracking-[0.26em] text-white/70">
             Eixo estratégico
           </div>
-          <h2 className="mt-1 flex items-center gap-2 font-display text-2xl font-black leading-tight text-white">
-            <span>{eixo.emoji}</span>
+          <h2 className="mt-1 flex items-center gap-2.5 font-display text-2xl font-black leading-tight text-white">
+            <IconBadge icon={EIXO_ICONS[eixo.key]} className="h-9 w-9" iconClassName="h-5 w-5" rounded="rounded-lg" />
             {eixo.nome}
           </h2>
         </div>
@@ -167,7 +169,7 @@ export function PainelEixoDetalhe({
                     aria-expanded={open}
                     className="flex w-full items-center gap-3 p-4 text-left transition hover:bg-[#F2F0EE]"
                   >
-                    <span className="shrink-0 text-2xl leading-none">{ind.emoji}</span>
+                    <IconBadge icon={INDICADOR_ICONS[ind.key]} className="h-9 w-9" iconClassName="h-5 w-5" rounded="rounded-lg" />
                     <div className="min-w-0 flex-1">
                       <h3 className="font-display text-base font-black leading-tight text-[#12007D]">
                         {ind.nome}
@@ -197,7 +199,7 @@ export function PainelEixoDetalhe({
             <section key={ind.key} className="mt-8 border-t border-[#F2F0EE]/10 pt-6 first:border-0">
               {!semCabecalhoIndicador && (
                 <div className="flex items-center gap-3">
-                  <span className="shrink-0 text-2xl leading-none">{ind.emoji}</span>
+                  <IconBadge icon={INDICADOR_ICONS[ind.key]} className="h-9 w-9" iconClassName="h-5 w-5" rounded="rounded-lg" />
                   <div className="min-w-0">
                     <h3 className="font-display text-lg font-black leading-tight text-[#F2F0EE]">
                       {ind.nome}

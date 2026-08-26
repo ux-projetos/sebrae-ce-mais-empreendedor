@@ -2,6 +2,8 @@ import { INDICADORES, type IndicadorKey } from "@/data/indicadores";
 import { X } from "lucide-react";
 import logoSalaEmpreendedor from "@/assets/logo-sala-do-empreendedor.png.asset.json";
 import { ConteudoIndicador } from "./ConteudoIndicador";
+import { INDICADOR_ICONS } from "@/lib/icons";
+import { IconBadge } from "./IconBadge";
 
 interface Props {
   indicadorKey: IndicadorKey;
@@ -24,9 +26,12 @@ export function PainelIndicadorDetalhe({
     <div className="fixed inset-x-0 bottom-0 z-50 max-h-[80vh] overflow-hidden rounded-t-3xl bg-[#12007D] shadow-2xl backdrop-blur-md animate-in slide-in-from-bottom md:inset-y-0 md:right-0 md:left-auto md:h-full md:max-h-none md:w-[520px] md:rounded-l-3xl md:rounded-t-none md:slide-in-from-right">
       <div className="flex items-start justify-between gap-3 border-b border-[#F2F0EE]/10 p-4 sm:p-6">
         <div className="flex min-w-0 items-start gap-3">
-          <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#2814C2] text-xl sm:h-14 sm:w-14 sm:rounded-2xl sm:text-2xl">
-            {ind.emoji}
-          </div>
+          <IconBadge
+            icon={INDICADOR_ICONS[ind.key]}
+            className="h-11 w-11 sm:h-14 sm:w-14"
+            iconClassName="h-6 w-6 sm:h-7 sm:w-7"
+            rounded="rounded-xl sm:rounded-2xl"
+          />
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
 

@@ -46,7 +46,7 @@ export const EIXOS: Eixo[] = [
     key: "cultura_empreendedora",
     nome: "Cultura Empreendedora",
     emoji: "💡",
-    cor: "#00C853",
+    cor: "#00F26D",
     descricao:
       "Fomentar a cultura empreendedora fortalecendo competências para transformar o ambiente de negócios.",
     indicadores: ["cultura_empreendedora"],

@@ -7,13 +7,13 @@ export function LogosInstitucionais({ className = "" }: { className?: string }) 
       <img
         src={logoSebrae}
         alt="Sebrae"
-        className="h-10 w-auto sm:h-12 md:h-16"
+        className="h-11 w-auto sm:h-14 md:h-18"
       />
-      <div className="h-8 w-px bg-[#DAD5CF]/25 sm:h-10 md:h-14" aria-hidden />
+      <div className="h-9 w-px bg-[#DAD5CF]/25 sm:h-11 md:h-15" aria-hidden />
       <img
         src={logoAtlasTerritorial}
         alt="Atlas Territorial"
-        className="h-8 w-auto sm:h-10 md:h-14"
+        className="h-9 w-auto sm:h-11 md:h-15"
       />
     </div>
   );

@@ -133,10 +133,10 @@ function Painel() {
 
   return (
     <DestaqueMapaContext.Provider value={destaqueCtx}>
-    <main className="min-h-[100dvh] px-3 py-3 sm:px-4 sm:py-4 md:px-8 md:py-6">
+    <main className="min-h-[100dvh] px-3 py-4 sm:px-4 sm:py-5 md:px-8 md:py-6">
 
       <div className="mx-auto flex min-h-[calc(100dvh-1.5rem)] max-w-[1700px] flex-col gap-4 sm:gap-5">
-        <header className="relative overflow-hidden rounded-2xl bg-transparent p-4 shadow-[0_30px_80px_-50px_rgba(0,0,0,0.9)] sm:rounded-3xl sm:p-6">
+        <header className="relative overflow-hidden rounded-2xl bg-transparent p-4 shadow-[0_30px_80px_-50px_rgba(0,0,0,0.9)] sm:rounded-3xl sm:p-5 md:p-6">
           <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <LogosInstitucionais className="pl-1 sm:pl-2 lg:pl-4" />
             <div className="lg:max-w-[58%] lg:text-right">
